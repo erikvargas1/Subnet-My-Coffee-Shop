@@ -17,7 +17,7 @@ C | 192.168.0.0 - 192.168.255.255
 ------------
 ## Binary to Decimal Conversion
 
-11000000.10101000.00000001.00010101 = 192.168.1.21
+11000000.|10101000.|00000001.|00010101 = 192.168.1.21
 
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |-----|----|----|----|---|---|---|---|
@@ -29,60 +29,101 @@ C | 192.168.0.0 - 192.168.255.255
 ## Decimal to Binary Conversion
 172.16.34.3
 
-10101100.00010000.00100010.00000011
+10101100.|00010000.|00100010.|00000011
 
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
  
 ------
-## let’s subnet your home network
-NOTE: when we need more networks we borrow host bits.
+# 🏠 Let’s Subnet Your Home Network
 
-**Your Home Network: 192.168.1.0/24**
+> **Note:** When we need more networks, we borrow **host bits**.
 
-**Question: We need to create 4 networks** 
+---
 
-11000000.10101000.00000001.00000000 = 192.168.1.0
-11111111.11111111.11111111.00000000 = 255.255.255.0 = /24
+## Your Home Network
+
+```
+Network Address: 192.168.1.0/24
+Binary:          11000000.10101000.00000001.00000000
+
+Subnet Mask:     255.255.255.0 (/24)
+Binary:          11111111.11111111.11111111.00000000
+```
 
 
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|-----|----|----|----|---|---|---|---|
-| 256 | 128| 64 | 32 | 16| 8 | 4 | 2 |
+## Question: We Need to Create 4 Networks
 
-1) Use the chart to calculate how many host bits you need to hack to create 4 networks
- - hack 2 bits to create 4 networks.
+Step 1: Use the chart to calculate how many host bits you need to hack to create 4 networks
 
-2) Hack the host bits
-11111111.11111111.11111111.00000000 = 255.255.255.0 = /24
-New subnet mask
-11111111.11111111.11111111.11|000000 = 255.255.255.192 = /26
+|  Bit  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-------|-----|----|----|----|---|---|---|---|
+| Value | 256 |128 | 64 | 32 |16 | 8 | 4 | 2 |
 
-3) Find the increment
-   1     1   0     0   0   0  0    0    = 192 
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+✅ To create **4 networks**, we need to **hack 2 host bits**. 
 
-The increment is 64. By using the last hacked increment we can determine the size of our networks and what the ranges are.
+-----------
 
-4) Create your /26 networks (remember to -1)
-192.168.1.0 - 192.168.1.63
-192.168.1.64 - 192.168.1.127
-192.168.1.128 - 192.168.1.191
-192.168.1.192 - 192.168.1.255
+### Step 2: Hack the Host Bits
 
-5) How many hosts are in each of these networks?
-11111111.11111111.11111111.11|000000 = 255.255.255.192 = /26
-   
-  1      1   0    0   0    0   0   0
+Original Subnet Mask (Binary):  
+```
+11111111.11111111.11111111.00000000 = 255.255.255.0 (/24)
+```
+
+New Subnet Mask After Borrowing 2 Bits:
+```
+11111111.11111111.11111111.11|000000 = 255.255.255.192 (/26)
+```
+
+----------
+
+### Step 3: Find the Increment
+
+Use the chart to calculate the increment:
+
+```
+  1     1     0     0     0     0     0     0
+|128 | 64  | 32  | 16  |  8  |  4  | 2  | 1  |
+|256 | 128 | 64  | 32  | 16  |  8  | 4  | 2  |
+
+``` 
+
+✅ **The increment is 64**.
+
+> By using the last hacked increment we can determine the size of each network block and what the ranges are.
+
+
+### Step 4: Create Your /26 Networks (Subtract 1)
+
+- Net 1   192.168.1.0 – 192.168.1.63
   
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|-----|----|----|----|---|---|---|---|
-| 256 | 128| 64 | 32 | 16| 8 | 4 | 2 |
+- Net 2   192.168.1.64 – 192.168.1.127
+  
+- Net 3   192.168.1.128 – 192.168.1.191
+  
+- Net 4   192.168.1.192 – 192.168.1.255 
 
+----------------
 
-By using the chart and counting the number of hosts bits. We can determine the # number of host for each network 
-64 total hosts and 62 usable hosts addresses.
+### Step 5: How Many Hosts Are in Each Network?
 
--------------------------------------
+New Subnet Mask:
+```
+255.255.255.192 = /26
+```
+
+```
+         1     1    |   0     0     0     0     0     0
+```
+
+| Bit     | 128 | 64  | 32  | 16  | 8  | 4  | 2  | 1  |
+|---------|-----|-----|-----|-----|----|----|----|----|
+| Value   | 256 | 128 |  64 |  32 | 16 |  8 |  4 |  2 |
+
+There are **6 host bits remaining** (the last 6 bits are 0s), so:
+
+By using the chart and counting the number of hosts bits. We can determine the # number of host for each network 64 total hosts and 62 usable hosts addresses. Minus -2 (for the network addresss and broadcast).
+
 
 
 
