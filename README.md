@@ -53,7 +53,7 @@ Binary:          11111111.11111111.11111111.00000000
 
 ## Question: We Need to Create 4 Networks
 
-Step 1: Use the chart to calculate how many host bits you need to hack to create 4 networks
+Step 1: Use the chart to calculate how many host bits we need to hack to create 4 networks
 
 |  Bit  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |-------|-----|----|----|----|---|---|---|---|
