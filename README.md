@@ -140,8 +140,9 @@ New Subnet Mask:
 
 By using the chart and counting the number of network bits. We can determine the number of host for each network 64 total hosts and **62 usable hosts addresses.** Minus -2 (for the network addresss and broadcast).
 
-
-
+------
+## Subnet My Coffee Shop 
+![ChatGPT Image Apr 25, 2025, 01_53_40 AM](https://github.com/user-attachments/assets/d113403c-8e10-4d0d-8c45-3dcfa6378349)
 
 
 
