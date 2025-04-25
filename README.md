@@ -125,7 +125,7 @@ New Subnet Mask:
 | Value   | 256 | 128 |  64 |  32 | 16 |  8 |  4 |  2 |
 
 
-By using the chart and counting the number of hosts bits. We can determine the # number of host for each network 64 total hosts and 62 usable hosts addresses. Minus -2 (for the network addresss and broadcast).
+By using the chart and counting the number of network bits. We can determine the number of host for each network 64 total hosts and **62 usable hosts addresses.** Minus -2 (for the network addresss and broadcast).
 
 
 
