@@ -53,11 +53,15 @@ Binary:          11111111.11111111.11111111.00000000
 
 ## Question: We Need to Create 4 Networks
 
-Step 1: Use the chart to calculate how many host bits we need to hack to create 4 networks
+Step 1: Use the Nosferatz chart to calculate how many host bits we need to hack to create 4 networks
 
+```
+          0     0    |  0    0    0    0     1    1
+``` 
 |  Bit  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |-------|-----|----|----|----|---|---|---|---|
 | Value | 256 |128 | 64 | 32 |16 | 8 | 4 | 2 |
+
 
 ✅ To create **4 networks**, we need to **hack 2 host bits**. 
 
@@ -113,7 +117,7 @@ New Subnet Mask:
 ```
 
 ```
-         1     1    |   0     0     0     0     0     0
+          1     1    |  0    0    0    0     0    0
 ```
 
 | Bit     | 128 | 64  | 32  | 16  | 8  | 4  | 2  | 1  |
