@@ -1,4 +1,17 @@
 # You-Suck-at-Subnetting
+---------
+## IPV4 Classful Addresssing
+
+| **Address Class** | **Range**                         | **Default Subnet Mask**     |
+|-------------------|-----------------------------------|------------------------------|
+| **A**             | 1.0.0.0 to 127.255.255.255        | 255.0.0.0                    |
+| **B**             | 128.0.0.0 to 191.255.255.255      | 255.255.0.0                  |
+| **C**             | 192.0.0.0 to 223.255.255.255      | 255.255.255.0                |
+| **D**             | 224.0.0.0 to 239.255.255.255      | Reserved for Multicasting    |
+| **E**             | 240.0.0.0 to 254.255.255.255      | Experimental                 |
+
+> **Note:** Class A addresses `127.0.0.0 to 127.255.255.255` cannot be used and are reserved for **loopback testing**.
+-------
 
 The IETF (Internet Engineering Task Force) introduced **CIDR** in 1993 to replace the "Classful" addressing system. With CIDR the classful requirments of: `Class A = /24, Class B = /16, Class C = /24` were removed. 
 
