@@ -29,9 +29,6 @@ C | 192.168.0.0 - 192.168.255.255
 
 ------------
 
-
-## Binary to Decimal Conversion
-
 <details>
  
 ## Binary to Decimal Conversion
@@ -55,6 +52,7 @@ C | 192.168.0.0 - 192.168.255.255
 </details>
 
 ----
+
 <details>
  
 ------
