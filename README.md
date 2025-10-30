@@ -28,6 +28,12 @@ B | 172.16.0.0 - 172.31.255.255
 C | 192.168.0.0 - 192.168.255.255
 
 ------------
+
+
+## Binary to Decimal Conversion
+
+<details>
+ 
 ## Binary to Decimal Conversion
 
 11000000.|10101000.|00000001.|00010101 = 192.168.1.21
@@ -45,6 +51,11 @@ C | 192.168.0.0 - 192.168.255.255
 10101100.|00010000.|00100010.|00000011
 
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+ 
+</details>
+
+----
+<details>
  
 ------
 # 🏠 Let’s Subnet Your Home Network
@@ -140,6 +151,8 @@ New Subnet Mask:
 
 By using the chart and counting the number of network bits. We can determine the number of host for each network 64 total hosts and **62 usable hosts addresses.** Minus -2 (for the network addresss and broadcast).
 
+</details>
+ 
 ------
 ## ☕ Subnet My Coffee Shop 
 
